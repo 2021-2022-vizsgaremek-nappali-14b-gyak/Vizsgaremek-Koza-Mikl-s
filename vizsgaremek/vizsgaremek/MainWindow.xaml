@@ -23,7 +23,19 @@
                 
             </Grid>
             <Grid x:Name="PageMenu" VerticalAlignment="Bottom" Width="250" Height="874" HorizontalAlignment="Left" Background="Red">
-                
+                <ListView BorderBrush="Transparent" Background="Transparent">
+                    <ListViewItem FontFamily="arial" FontSize="13" Foreground="White">
+                        <TextBlock>
+                            Menü 1
+                        </TextBlock>
+                    </ListViewItem>
+
+                    <ListViewItem FontFamily="arial" FontSize="13" Foreground="White">
+                        <TextBlock>
+                            Kilépés a programból
+                        </TextBlock>
+                    </ListViewItem>
+                </ListView>
             </Grid>
 
            

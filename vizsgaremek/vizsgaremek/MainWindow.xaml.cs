@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using vizsgaremek.Navigation;
+using vizsgaremek.Pages;
+
 
 namespace vizsgaremek
 {
@@ -23,6 +26,13 @@ namespace vizsgaremek
         public MainWindow()
         {
             InitializeComponent();
+            //Statikus osztály a Navigate
+            // Eltárolja a nyitó ablakot, hogy azon tudjuk módosítani a "page"-ket
+            Navigate.mainWindow = this;
+            //Létrehozzuk a nyitó "UserControlt" (welcomePage)
+            WelcomePage welcomePage = new WelcomePage();
+            //Megjelenítjük a WelcomePage-t
+            Navigate.Navigation(welcomePage);
         }
     }
 }
