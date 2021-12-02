@@ -1,20 +1,20 @@
 ﻿vizsgaremek
-1.0.0.0
+
 
 winexe
 C#
 .cs
-J:\2_14B\C#\Vizsgaremek WPF\vizsgaremek\vizsgaremek\obj\Debug\net5.0-windows\
+J:\2_14B\C#\Vizsgaremek WPF\vizsgaremek\vizsgaremek\obj\Release\net5.0-windows\
 vizsgaremek
 none
 false
-TRACE;DEBUG;NET;NET5_0;NETCOREAPP
+TRACE;RELEASE;NET;NET5_0;NETCOREAPP
 J:\2_14B\C#\Vizsgaremek WPF\vizsgaremek\vizsgaremek\App.xaml
 2-1932911898
 
-7803660795
+5248431192
 193-1891726104
 MainWindow.xaml;Pages\WelcomePage.xaml;
 
-False
+True
 
