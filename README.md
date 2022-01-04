@@ -1,1 +1,2 @@
-# sz0kozmik
+# gycsaba-vasvari
+Vizsgaremek
