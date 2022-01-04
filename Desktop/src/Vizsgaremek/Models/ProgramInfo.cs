@@ -12,6 +12,12 @@ namespace Vizsgaremek.Models
     {
         private Version version;
         private string authors;
+        private string title;
+        private string description;
+        private string company;
+
+
+
 
         public Version Version
         {
@@ -23,6 +29,28 @@ namespace Vizsgaremek.Models
             }
         }
 
+        public string Title
+        {
+            get
+            {
+                return title;
+            }
+        }
+        public string Description
+        {
+            get
+            {
+                return description;
+            }
+        }
+        public string Company
+        {
+            get
+            {
+                return company;
+            }
+        }
+
         public string Authors
         {
             get
@@ -31,8 +59,24 @@ namespace Vizsgaremek.Models
             }
         }
 
+
+
         public ProgramInfo()
-        { }
+        {
+            Assembly assembly = Assembly.GetExecutingAssembly();
+
+            foreach (Attribute attr in Attribute.GetCustomAttributes(assembly))
+            {
+                if (attr.GetType() == typeof(AssemblyTitleAttribute))
+                    title = ((AssemblyTitleAttribute)attr).Title;
+                else if (attr.GetType() == typeof(AssemblyDescriptionAttribute))
+                    description = ((AssemblyDescriptionAttribute)attr).Description;
+                else if (attr.GetType() == typeof(AssemblyCompanyAttribute))
+                    company = ((AssemblyCompanyAttribute)attr).Company;
+
+            }
+        }
+
 
 
 
