@@ -55,7 +55,7 @@ namespace Vizsgaremek.Models
         {
             get
             {
-                return "";
+                return "Koza Miklós";
             }
         }
 
@@ -76,10 +76,5 @@ namespace Vizsgaremek.Models
 
             }
         }
-
-
-
-
-
     }
 }

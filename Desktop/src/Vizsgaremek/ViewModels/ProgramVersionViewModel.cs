@@ -25,6 +25,57 @@ namespace Vizsgaremek.ViewModels
             }
         }
 
+        //kell ide csinálni egy title tulajdonságot. 
+
+        public string Title
+        {
+            get
+            {
+                return programInfo.Title.ToString();
+            }
+            set
+            {
+                Title = value;
+            }
+        }
+
+        public string Description
+        {
+            get
+            {
+                return programInfo.Description.ToString();
+            }
+            set
+            {
+                Description = value;
+            }
+        }
+
+        public string Authors
+        {
+            get
+            {
+                return programInfo.Authors.ToString();
+            }
+            set
+            {
+                Authors = value;
+            }
+        }
+
+        public string Company
+        {
+            get
+            {
+                return programInfo.Company.ToString();
+            }
+            set
+            {
+                Company = value;
+            }
+        }
+
+
         public ProgramVersionViewModel()
         {
             programInfo = new ProgramInfo();
