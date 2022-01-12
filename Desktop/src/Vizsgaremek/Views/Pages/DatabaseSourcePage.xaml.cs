@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using Vizsgaremek.Views.Pages;
+using Vizsgaremek.ViewModels;
+using Vizsgaremek.Views.Navigation;
 
 namespace Vizsgaremek.Views.Pages
 {
@@ -22,15 +24,19 @@ namespace Vizsgaremek.Views.Pages
     /// </summary>
     public partial class DatabaseSourcePage : UserControl
     {
+        DatabaseSourceViewModel databaseSourceViewModel;
+
         public DatabaseSourcePage()
         {
+            databaseSourceViewModel = new DatabaseSourceViewModel();
             InitializeComponent();
+            this.DataContext = databaseSourceViewModel;
         }
        
         private void Image_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             WelcomePage welcomePage = new WelcomePage();
-            
+            Navigate.Navigation(welcomePage);
         }
     }
 }
