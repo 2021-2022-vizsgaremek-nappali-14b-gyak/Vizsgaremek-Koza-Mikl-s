@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Vizsgaremek.Pages
+namespace Vizsgaremek.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for DatabaseSourcePage.xaml
+    /// Interaction logic for WelcomePage.xaml
     /// </summary>
-    public partial class DatabaseSourcePage : UserControl
+    public partial class WelcomePage : UserControl
     {
-        public DatabaseSourcePage()
+        public WelcomePage()
         {
             InitializeComponent();
         }

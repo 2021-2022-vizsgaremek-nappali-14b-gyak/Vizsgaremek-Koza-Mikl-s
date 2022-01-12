@@ -13,16 +13,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Vizsgaremek.Pages
+using Vizsgaremek.Views.Pages;
+
+namespace Vizsgaremek.Views.Pages
 {
     /// <summary>
-    /// Interaction logic for WelcomePage.xaml
+    /// Interaction logic for DatabaseSourcePage.xaml
     /// </summary>
-    public partial class WelcomePage : UserControl
+    public partial class DatabaseSourcePage : UserControl
     {
-        public WelcomePage()
+        public DatabaseSourcePage()
         {
             InitializeComponent();
+        }
+       
+        private void Image_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            WelcomePage welcomePage = new WelcomePage();
+            
         }
     }
 }
