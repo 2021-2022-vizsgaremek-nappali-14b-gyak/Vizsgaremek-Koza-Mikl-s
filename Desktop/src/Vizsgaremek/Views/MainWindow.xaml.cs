@@ -59,6 +59,11 @@ namespace Vizsgaremek
                         ProgramVersion programVersion = new ProgramVersion();
                         Navigate.Navigation(programVersion);
                         break;
+
+                    case "lviDatabaseSourceSelection":
+                        DatabaseSourcePage databaseSourcePage = new DatabaseSourcePage();
+                        Navigate.Navigation(databaseSourcePage);
+                        break;
                 }
                 
             }
