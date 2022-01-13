@@ -27,7 +27,7 @@ namespace Vizsgaremek.ViewModels
                 {
                     case DbSource.DEVOPS:
                         return "devops adatforrás";
-                        break;
+                        
                     case DbSource.LOCALHOST:
                         return "localhost adatforrás.";
                     case DbSource.NONE:
@@ -37,6 +37,19 @@ namespace Vizsgaremek.ViewModels
                 }
             }
         }
+
+        // Esemény kiváltása (raise)
+        protected void OnDatabaseSourceChange()
+        {
+            // Argumentumba belepakoljuk az üzenetet
+            DatabaseSourceEventArg dsea = new DatabaseSourceEventArg(DisplayedDatabaseSource);
+            // Ha van esemény akkor meghívjük a feliratkozott osztályokat;
+            if (ChangeDatabaseSource != null)
+                ChangeDatabaseSource.Invoke(this, dsea);
+        }
+
+        public event EventHandler ChangeDatabaseSource;
+
 
         public DatabaseSourceViewModel()
         {
@@ -59,6 +72,7 @@ namespace Vizsgaremek.ViewModels
                 selectedDatabaseSources = value;
                 displayedDatabaseSource = DisplayedDatabaseSource;
                 dbSource = DbSource;
+                OnDatabaseSourceChange();
             }
 
         }

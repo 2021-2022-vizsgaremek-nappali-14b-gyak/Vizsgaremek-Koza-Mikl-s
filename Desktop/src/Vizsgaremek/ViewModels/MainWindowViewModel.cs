@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Vizsgaremek.ViewModels.BaseClass;
+
 namespace Vizsgaremek.ViewModels
 {
-    class MainWindowViewModel
+    class MainWindowViewModel : ViewModelBaseClass
     {
 
         private string selectedSource;
@@ -14,7 +16,12 @@ namespace Vizsgaremek.ViewModels
         public string SelectedSource
         {
             get => selectedSource;
-            set => selectedSource = value;
+            set 
+            {
+                selectedSource = value;
+                OnPropertyChanged("SelectedSource");
+
+            } 
         }
     }
 }
