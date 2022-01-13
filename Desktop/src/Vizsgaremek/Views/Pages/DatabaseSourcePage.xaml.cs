@@ -24,11 +24,11 @@ namespace Vizsgaremek.Views.Pages
     /// </summary>
     public partial class DatabaseSourcePage : UserControl
     {
-        DatabaseSourceViewModel databaseSourceViewModel;
 
+        DatabaseSourceViewModel databaseSourceViewModel;
         public DatabaseSourcePage()
         {
-            databaseSourceViewModel = new DatabaseSourceViewModel();
+            this.databaseSourceViewModel = databaseSourceViewModel;
             InitializeComponent();
             this.DataContext = databaseSourceViewModel;
         }
