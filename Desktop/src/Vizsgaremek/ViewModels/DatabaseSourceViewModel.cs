@@ -42,7 +42,15 @@ namespace Vizsgaremek.ViewModels
             get
             {
                 //TDD fejlesztés
+                //return DbSource.NONE;
+                if (selectedDatabaseSources == "localhost")
+                    return DbSource.LOCALHOST;
+                
+                else if (selectedDatabaseSources == "devops")
+                    return DbSource.DEVOPS;
                 return DbSource.NONE;
+                
+
             }
         }
 
