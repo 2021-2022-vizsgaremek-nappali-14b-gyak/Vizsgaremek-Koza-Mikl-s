@@ -20,14 +20,14 @@
                      Height="80"
                      Width="200"
                      ItemsSource="{Binding Path=DisplayedDatabaseSources}"
-                     SelectedItem="{Binding Path=SelectedDatabaseSource}">
+                     SelectedItem="{Binding Path=SelectedDatabaseSources}">
                                    
             </ListBox>
             <StackPanel Orientation="Horizontal">
                 <Label>A választott adatbázis</Label>
                 <TextBlock FontWeight="Bold" 
                            x:Name="txtSelectedDatabaseSource"
-                           Text="{Binding Path=SelectedDatabaseSource}"
+                           Text="{Binding Path=SelectedDatabaseSources}"
                            >
                     
                 </TextBlock>
