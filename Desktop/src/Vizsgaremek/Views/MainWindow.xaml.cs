@@ -36,6 +36,7 @@ namespace Vizsgaremek
             mainWindowViewModel = new MainWindowViewModel();
             databaseSourceViewModel = new DatabaseSourceViewModel();
             mainWindowViewModel.SelectedSource = databaseSourceViewModel.DisplayedDatabaseSource;
+
             InitializeComponent();
             //A Mainwindow ablakbban megjelenő adatok a MainWindowViweModel-ben vannak.
 

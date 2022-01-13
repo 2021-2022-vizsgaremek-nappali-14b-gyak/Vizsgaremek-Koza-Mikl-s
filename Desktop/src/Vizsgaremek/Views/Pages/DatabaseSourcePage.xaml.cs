@@ -26,7 +26,7 @@ namespace Vizsgaremek.Views.Pages
     {
 
         DatabaseSourceViewModel databaseSourceViewModel;
-        public DatabaseSourcePage()
+        public DatabaseSourcePage(DatabaseSourceViewModel databaseSourceViewModel)
         {
             this.databaseSourceViewModel = databaseSourceViewModel;
             InitializeComponent();
@@ -38,5 +38,7 @@ namespace Vizsgaremek.Views.Pages
             WelcomePage welcomePage = new WelcomePage();
             Navigate.Navigation(welcomePage);
         }
+
+
     }
 }
