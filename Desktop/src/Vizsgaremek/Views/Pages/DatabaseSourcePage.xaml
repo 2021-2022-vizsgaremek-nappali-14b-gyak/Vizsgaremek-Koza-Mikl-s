@@ -19,7 +19,7 @@
             <ListBox x:Name="listDatabaseSources"
                      Height="80"
                      Width="200"
-                     ItemsSource="{Binding Path=DisplayedDatabaseSource}"
+                     ItemsSource="{Binding Path=DisplayedDatabaseSources}"
                      SelectedItem="{Binding Path=SelectedDatabaseSource}">
                                    
             </ListBox>

@@ -54,7 +54,8 @@ namespace Vizsgaremek.ViewModels
         public DatabaseSourceViewModel()
         {
             repodatabaseSources = new DatabaseSources();
-            displayedDatabaseSources = new ObservableCollection<string>(repodatabaseSources.GetAllDatabaseSources());
+            displayedDatabaseSources = 
+                new ObservableCollection<string>(repodatabaseSources.GetAllDatabaseSources());
             SelectedDatabaseSources = "localhost";
         }
 
