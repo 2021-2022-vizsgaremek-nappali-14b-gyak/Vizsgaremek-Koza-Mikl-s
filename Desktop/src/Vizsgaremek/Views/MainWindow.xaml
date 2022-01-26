@@ -8,10 +8,10 @@
         Title="MainWindow" Height="1024" Width="1280" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
         <Grid Width="1030" x:Name="RightPanel" HorizontalAlignment="Right">
-            <Grid x:Name="PageHeader" Height="150" VerticalAlignment="Top" Background="Wheat">
-            </Grid>
-            <Grid x:Name="PageContent" Height="874" VerticalAlignment="Bottom" Background="White">
-            </Grid>
+            <Grid x:Name="PageHeader" Height="150" VerticalAlignment="Top" Background="Wheat"></Grid>
+
+            <Grid x:Name="PageContent" Height="874" VerticalAlignment="Bottom" Background="White"></Grid>
+
         </Grid>
 
         <Grid x:Name="ContentStatus" Height="30" VerticalAlignment="Bottom" Background="Silver">

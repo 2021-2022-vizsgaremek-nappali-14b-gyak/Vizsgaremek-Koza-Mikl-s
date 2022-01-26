@@ -31,14 +31,17 @@ namespace Vizsgaremek
         DatabaseSourceViewModel databaseSourceViewModel;
 
 
+
         public MainWindow()
         {
             mainWindowViewModel = new MainWindowViewModel();
             databaseSourceViewModel = new DatabaseSourceViewModel();
+            InitializeComponent();
+
+            this.DataContext = mainWindowViewModel;
             mainWindowViewModel.SelectedSource = databaseSourceViewModel.DisplayedDatabaseSource;
 
 
-            // Feliratkozunk az eseményre. Ha változik az adat az adott osztályba tudni fogunk róla!
             databaseSourceViewModel.ChangeDatabaseSource += DatabaseSourceViewModel_ChangeDatabaseSource1; ;
 
            
@@ -46,16 +49,10 @@ namespace Vizsgaremek
 
 
 
-            InitializeComponent();
-            //A Mainwindow ablakbban megjelenő adatok a MainWindowViweModel-ben vannak.
 
             this.DataContext = mainWindowViewModel;
-            // Statikus osztály a Navigate
-            // Eltárolja a nyitó ablakt, hogy azon tudjuk módosítani a "page"-ket
             Navigate.mainWindow = this;
-            // Létrehozzuk a nyitó "UsuerControl" (WelcomPage)
             WelcomePage welcomePage = new WelcomePage();
-            // Megjelnítjük a WelcomePage-t
             Navigate.Navigation(welcomePage);
         }
 
@@ -96,7 +93,6 @@ namespace Vizsgaremek
                     case "lviDatabaseSourceSelection":
                         DatabaseSourcePage databaseSourcePage = new DatabaseSourcePage(databaseSourceViewModel);
                         Navigate.Navigation(databaseSourcePage);
-                       
                         break;
                 }
                 

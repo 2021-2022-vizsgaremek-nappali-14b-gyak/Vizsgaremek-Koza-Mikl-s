@@ -19,8 +19,10 @@ namespace Vizsgaremek.ViewModels.BaseClass
         }
 
         public virtual void Dispose() { }
-    
+
     }
+
+
 
 
 }

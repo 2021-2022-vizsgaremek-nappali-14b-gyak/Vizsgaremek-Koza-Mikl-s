@@ -14,7 +14,7 @@ namespace Vizsgaremek.ViewModels
 
        private ObservableCollection<string> displayedDatabaseSources;
 
-        private string selectedDatabaseSources;
+        private string selectedDatabaseSource;
         DatabaseSources repodatabaseSources;
         private string displayedDatabaseSource;
         private DbSource dbSource;
@@ -48,7 +48,21 @@ namespace Vizsgaremek.ViewModels
                 ChangeDatabaseSource.Invoke(this, dsea);
         }
 
+
         public event EventHandler ChangeDatabaseSource;
+
+        class DatabaseSourceEventArg : EventArgs
+        {
+            private string databaseSource;
+
+            public DatabaseSourceEventArg(string databaseSource)
+            {
+                this.DatabaseSource = databaseSource;
+            }
+
+            public string DatabaseSource { get => databaseSource; set => databaseSource = value; }
+        }
+
 
 
         public DatabaseSourceViewModel()
@@ -67,12 +81,12 @@ namespace Vizsgaremek.ViewModels
 
         public string SelectedDatabaseSources
         {
-            get => selectedDatabaseSources;
+            get => selectedDatabaseSource;
             set 
             {
-                selectedDatabaseSources = value;
-                displayedDatabaseSource = DisplayedDatabaseSource;
+                selectedDatabaseSource = value;
                 dbSource = DbSource;
+                displayedDatabaseSource = DisplayedDatabaseSource;
                 OnDatabaseSourceChange();
             }
 
@@ -84,10 +98,10 @@ namespace Vizsgaremek.ViewModels
             {
                 //TDD fejlesztés
                 //return DbSource.NONE;
-                if (selectedDatabaseSources == "localhost")
+                if (selectedDatabaseSource == "localhost")
                     return DbSource.LOCALHOST;
                 
-                else if (selectedDatabaseSources == "devops")
+                else if (selectedDatabaseSource == "devops")
                     return DbSource.DEVOPS;
                 return DbSource.NONE;
                 
